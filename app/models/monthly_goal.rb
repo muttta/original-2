@@ -1,0 +1,2 @@
+class MonthlyGoal < ApplicationRecord
+end
