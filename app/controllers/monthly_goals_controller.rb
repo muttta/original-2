@@ -1,0 +1,3 @@
+class MonthlyGoalController < ApplicationController
+ 
+end
