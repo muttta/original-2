@@ -15,8 +15,7 @@ ActiveRecord::Schema.define(version: 2021_12_08_004246) do
   create_table "daily_results", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "today", null: false
     t.integer "sales", null: false
-    t.integer "rate", null: false
-    t.integer "productivity", null: false
+    t.integer "man_hr", null: false
     t.text "event"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

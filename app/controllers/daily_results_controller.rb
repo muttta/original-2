@@ -27,7 +27,7 @@ class DailyResultsController < ApplicationController
     #end
   #end
   def daily_params
-    params.require(:daily_result).permit(:today, :sales, :rate, :productivity, :event)
+    params.require(:daily_result).permit(:today, :sales, :man_hr, :event)
   end
 
 end
