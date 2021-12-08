@@ -1,0 +1,16 @@
+<h2>日報</h2>
+<%= form_with model: @daily_result, url: daily_results_path, local: true do |f|%>
+<p>日付</p>
+<%= f.date_field :today, class:"today", id:"today" %>
+<p>本日の売上金額</p>
+<%= f.number_field :sales, class:"today_sales", id:"today_sales" %>
+<p>人時</p>
+<%= f.number_field :man_hr, class:"man_hr", id:"man_hr" %>
+<p>引き継ぎ事項</p>
+ <%= f.text_area :event, class:"event", id:"event" %>
+ <p>この内容で日誌を作成します</p>
+ <%= f.submit "日誌作成", class:"submit", id:"submit" %>
+ <% end %>
+
+
+
