@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_08_004246) do
+ActiveRecord::Schema.define(version: 2021_12_08_094131) do
+
+  create_table "buiness_diaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "today", null: false
+    t.integer "rate", null: false
+    t.integer "productivity", null: false
+    t.bigint "daily_result_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["daily_result_id"], name: "index_buiness_diaries_on_daily_result_id"
+  end
 
   create_table "daily_results", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "today", null: false
@@ -30,4 +40,5 @@ ActiveRecord::Schema.define(version: 2021_12_08_004246) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "buiness_diaries", "daily_results"
 end
