@@ -1,5 +1,6 @@
 <h2>日報</h2>
 <%= form_with model: @daily_result, url: daily_results_path, local: true do |f|%>
+ <%= render 'shared/error_messages', model: f.object %>
 <p>日付</p>
 <%= f.date_field :today, class:"today", id:"today" %>
 <p>本日の売上金額</p>

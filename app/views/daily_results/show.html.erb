@@ -1,0 +1,11 @@
+<h2>明日の予算は<%=@tomorrow_sales%>円です</h2>
+<h2>明日の人件費予算は<%=@tomorrow_laborcost%>円です</h2>
+<%="前日予算達成率は #{ @daily.sales / @sales_expectation * 100}%以上でした"%>
+<% man_hr = @daily.sales/@daily.man_hr%>
+<%= "前日人時生産性は#{man_hr}円でした"%>
+<%="前日人件費は #{@daily.man_hr * 1200}円でした" %>
+
+<p>前日引継ぎ事項</p>
+<%= @daily.event %>
+<p>本日の予定</p>
+<%= @tomorrow_event %>
