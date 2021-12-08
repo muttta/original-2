@@ -1,6 +1,9 @@
 class DailyResultsController < ApplicationController
   before_action :set_goal, only:[:show]
 
+  def index
+    
+  end
   def new
     @daily_result = DailyResult.new
   end
