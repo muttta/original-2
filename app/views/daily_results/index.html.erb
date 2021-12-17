@@ -1,3 +1,26 @@
-<h1 class="title">日報アプリ</h1>
-<%= link_to "月間目標入力", new_monthly_goal_path, method: :get, class: "monthly-btn" %>
-<%= link_to "日誌作成", new_daily_result_path, method: :get, class: "daily-btn" %>
+<div class="jumbotron jumbotron-extend">
+  <div class="container-fluid jumbotron-container">
+
+  <div class="row justify-content-between">
+
+    <div class="left-messages col-5 text-center">
+      <div class="top-image ml-5">
+        <%= image_tag "pixel-cells-gad6954dc0_640.png", class: "image"%>
+    </div>
+    </div>
+
+    <div class="right-messages col-5 mr-5">
+        <h1 class="title mt-5">日報アプリ</h1>
+      <div class="nav-btn">
+        <div class="btns mt-5">
+        <%= link_to "月間目標入力", new_monthly_goal_path, method: :get, class: "btn btn--shadow ml-5" %>
+        <%= link_to "日誌作成", new_daily_result_path, method: :get, class: "btn btn--shadow ml-3" %>
+        </div>
+      </div>
+      <div>
+    
+
+  </div>
+
+  </div>
+</div>
