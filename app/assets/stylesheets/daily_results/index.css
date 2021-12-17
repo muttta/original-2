@@ -1,0 +1,67 @@
+.jumbotron-extend {
+  position:relative;
+  height: 100vh;
+  min-height: 300px;
+}
+.jumbotron {
+  background-color: wheat;
+}
+.jumbotron-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.left-messages{
+
+}
+.right-messages {
+  background-color: white;
+  height: 80vh;
+
+}
+
+.title{
+  text-align: center;
+  font-size: 60px;
+
+}
+
+.nav-btn{
+  display: flex;
+  text-align: center;
+}
+.btn{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+.btn {
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+}
+.btn:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f56500;
+  border-bottom: 2px solid #b84c00;
+}
+.btn--shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+.image {
+  width: 300px;
+}

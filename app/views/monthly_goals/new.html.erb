@@ -1,31 +1,59 @@
+<div class="monthly-page">
+<div class="container-fluid">
 
+  <div class="header d-flex align-items-center">
+    <h2 class="sab-title ">来月の目標</h2>  
+  </div>
 
-<h2 class="sab-title">来月の目標</h2>
+  <div class="monthly-form ">
 
-<p>売上予算・人件費予算を入力してください</p>
-<%= form_with(model: @monthly_goals, local: true) do |f| %>
-  <div class="monthly-goal">
-    <div class="set-date">
-      <p>日付</p>
-      <%= f.date_field :day, class:"day", id:"day" %>
+    <div class="title pt-5 py-3">
+      <p class="title-name mt-2">売上予算・人件費予算を入力してください</p>
     </div>
-    <div class="set-sales">
-      <p>当日予算</p>
-      <%= f.number_field :sales_expectation, class:"sales", id:"sales" %>
-    </div>
-    <div class="labor-cost">
-      <p>当日人件費予算</p>
-      <%= f.number_field :labor_cost, class:"cost", id:"cost" %>
-    </div>
-    <div class="set-event">
-      <p>当日イベント予定</p>
-      <%= f.text_area :event, class:"event", id:"event" %>
-    </div>
-    <div class="submit">
-      <p>入力が終わったら送信してください</p>
-      <%= f.submit "送信", class:"submit", id:"submit" %>
+    
+    <div class="forms p-5 text-center">
+      <div class="form">
+        <%= form_with(model: @monthly_goals, local: true) do |f| %>
+
+        <div class="form-group row">
+          <label class="set col-sm-2">日付:</label>
+            <div class="col-sm-10">
+              <%= f.date_field :day, class:"form-set", id:"day" %>
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="set col-sm-2">当日予算:</label>
+            <div class="col-sm-10">
+              <%= f.number_field :sales_expectation, class:"form-set", id:"sales" %>
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="set col-sm-2">当日人件費予算:</label>
+            <div class="col-sm-10">
+              <%= f.number_field :labor_cost, class:"form-set", id:"cost" %>
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="set col-sm-2">当日イベント予定:</label>
+            <div class="col-sm-10">
+              <%= f.text_area :event, class:"form-set", id:"event" %>
+            </div>
+        </div>
+
+        <div class="submit mt-5">
+          <p>保存する</p>
+          <%= f.submit "保存", class:"submit-btn", id:"submit" %>
+        </div>
+
+      <% end %>
+
     </div>
   </div>
-<% end %>
 
+</div>
+  <div class="bottom "></div>
+</div>
 
